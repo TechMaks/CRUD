@@ -31,6 +31,24 @@ Use the following command to download MySQL images using Docker Compose
 
 Connect to the database using MySQL Workbench or your preferred MySQL client.
 
+Use the command for created Schema and Table in your data base.
+
+`$ docker exec -it mysqlbd mysql -uroot -p`
+
+`$ CREATE SCHEMA `crud` ;`
+
+`$ USE `crud`;`
+
+`$ CREATE TABLE `usuarios`(
+ `id`int NOT NULL AUTO_INCREMENT,
+ `nome`varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+ `email`varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+ `fone`varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+ `data_nascimento` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+`
+
 ## Functionalities
 
 - Create users in the database
